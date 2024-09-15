@@ -1,0 +1,603 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #87CEEB;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+.headerSection {
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #4c9beb;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+.headerContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+}
+.logo {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  animation: logoBounce 2s infinite;
+}
+.navMenu {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+}
+.navMenu ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.navMenu a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 10px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.navMenu a:hover {
+  color: red;
+  transform: translateY(-5px);
+}
+.right {
+  flex: 2;
+  display: flex;
+  gap: 20px;
+}
+.right a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.right a:hover {
+  color: red;
+  transform: translateY(-5px);
+}
+@keyframes logoBounce {
+  0%, 100% {
+    transform: translateY(10px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+.sectionHeading {
+  font-size: 2.5rem;
+  color: #333;
+  text-align: center;
+  margin: 20px 0;
+  padding: 10px 20px;
+  display: inline-block;
+  position: relative;
+  border: 2px solid #333;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  animation: slideIn 1s ease-out forwards;
+}
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.sectionHeading::before,
+.sectionHeading::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 100px;
+  height: 2px;
+  background-color: #333;
+}
+.sectionHeading::before {
+  left: -100px;
+}
+.sectionHeading::after {
+  right: -100px;
+}
+.sectionHeading:hover {
+  color: #ff0000;
+  border-color: #ff0000;
+  transition: transform 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+.right {
+  flex: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.right div {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.right div:hover {
+  color: #f5c518;
+}
+.banner {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+.banner img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+.bannerContent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 1;
+}
+.bannerContent h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+.bannerContent p {
+  font-size: 1.5rem;
+}
+.bannerBox {
+  margin: 10px 0;
+}
+.bannerBox img {
+  width: 100%;
+}
+.collectionSection {
+  margin: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+.placeImages {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 20px;
+}
+.placeItem:nth-child(1) {
+  grid-column: span 1;
+}
+.placeItem:nth-child(2) {
+  grid-column: span 1;
+}
+.placeItem:nth-child(3) {
+  grid-column: span 1;
+}
+.placeItem:nth-child(4) {
+  grid-column: span 1;
+}
+.placeItem:nth-child(5) {
+  grid-column: span 1;
+}
+.placeItem:nth-child(6) {
+  grid-column: span 1;
+}
+.placeItem {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+.placeItem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.placeItem:hover img {
+  transform: scale(1.1);
+}
+.placeInfo {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 10px;
+  text-align: center;
+  border-radius: 0 0 10px 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateY(20px);
+}
+.placeItem:hover .placeInfo {
+  opacity: 1;
+  transform: translateY(0);
+}
+.bookingButton {
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 5px;
+  transition: background-color 0.3s ease;
+}
+.bookingButton:hover {
+  background-color: #0a0ee9;
+}
+.randomText {
+  margin-top: 5px;
+  font-size: 0.9rem;
+}
+@media (max-width: 768px) {
+  .placeImages {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: auto;
+  }
+}
+.hotelsSection {
+  background: linear-gradient(135deg, #6cbbda, #6398e7);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  margin: 20px 0;
+  text-align: center;
+}
+.hotelsHeading {
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+.hotelImages {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.hotelImageWrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  flex: 0 0 22%;
+  max-width: 22%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 220px;
+}
+.hotelImageWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.4s ease;
+}
+.hotelImageWrapper:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+.hotelInfo {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px;
+  text-align: center;
+   opacity: 0;
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+    border-radius: 10px;
+  }
+  .hotelImageWrapper:hover .hotelInfo {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .hotelInfo p {
+    margin: 0;
+    font-size: 1rem;
+    text-shadow: 
+      0 0 8px rgba(255, 255, 255, 0.9),
+      0 0 15px rgba(255, 255, 255, 0.7);
+  }
+  .bookingButton {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 5px;
+    transition: background-color 0.3s ease;
+  }
+  .bookingButton:hover {
+    background-color: #0056b3;
+  }
+  .bannerBox {
+    position: relative;
+    margin: 30px 0;
+    text-align: left;
+  }
+  .bannerBox {
+    width: 100%;
+    margin-top: -20px;
+    padding: 0;
+    overflow: hidden;
+  }
+  .bannerBox img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    display: block;
+    position: relative;
+    top: -20px;
+  }
+  
+  .bannerText {
+    font-family: TAPhilausophy, Helvetica, Arial, sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 10;
+    padding: 27px;
+    transform: translateY(-90%);
+    color: rgb(248, 251, 251);
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 
+      0 0 1px rgba(0, 0, 0, 0.8),
+      0 0 5px rgba(22, 28, 35, 0.8),
+      0 0 10px rgba(18, 25, 29, 0.6),
+      0 0 15px rgba(56, 156, 244, 0.4);
+    z-index: 1;
+    max-width: 50%;
+    box-sizing: border-box;
+    white-space: normal;
+    animation: moveText 4s infinite alternate;
+  } 
+  @keyframes moveText {
+    0% {
+      transform: translateY(-50%) translateX(-10px);
+    }
+    50% {
+      transform: translateY(-50%) translateX(10px);
+    }
+    100% {
+      transform: translateY(-50%) translateX(-10px);
+    }
+  }
+  .banner2Text {
+    font-family: TAPhilausophy, Helvetica, Arial, sans-serif;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-30%, -30%);
+    padding: 27px;
+    color: rgb(244, 248, 248);
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 
+      0 0 1px rgba(0, 0, 0, 0.8),
+      0 0 5px rgba(22, 28, 35, 0.8),
+      0 0 10px rgba(18, 25, 29, 0.6),
+      0 0 15px rgba(56, 156, 244, 0.4);
+    z-index: 1;
+    max-width: 50%;
+    box-sizing: border-box;
+    white-space: normal;
+    text-align: center;
+    animation: moveText 4s infinite alternate;
+  }
+  .banner1Text {
+    font-family: TAPhilausophy, Helvetica, Arial, sans-serif;
+    position: absolute;
+    top: 30%;
+    left: 25%;
+    transform: translate(-30%, -30%);
+    padding: 27px;
+    color: rgb(242, 248, 248);
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 
+      0 0 1px rgba(0, 0, 0, 0.8),
+      0 0 5px rgba(22, 28, 35, 0.8),
+      0 0 10px rgba(18, 25, 29, 0.6),
+      0 0 15px rgba(56, 156, 244, 0.4);
+    z-index: 1;
+    max-width: 50%;
+    box-sizing: border-box;
+    white-space: normal;
+    text-align: center;
+    animation: moveText 4s infinite alternate;
+  }
+  .searchBox {
+    display: flex;
+    align-items: center;
+    background-color: #f1f1f1;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    margin-top: 20px;
+  }
+  .searchInput {
+   flex: 1;
+    padding: 7px;
+    font-size: 1rem;
+  }
+  .searchDropdown {
+    padding: 10px;
+    font-size: 1rem;
+    margin-left: 5px;
+  }
+  .searchButton {
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    padding: 10px 10px;
+    cursor: pointer;
+    margin-left: 5px;
+  }
+  .searchButton:hover {
+    background-color: #0056b3;
+  }
+  .footerSection {
+    padding: 40px;
+    background-color: #f8f9fa;
+    text-align: center;
+  }
+  .footerNav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+  .footerNav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  .footerNav a:hover {
+    color: #ff0000;
+  }
+  .socialMediaIcons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+  .socialMediaIcons a {
+    text-decoration: none;
+    color: #333;
+    font-size: 24px;
+    transition: color 0.3s ease;
+  }
+  .socialMediaIcons a:hover {
+    color: #ff0000;
+  }
+  .footerInfo {
+    margin-bottom: 30px;
+    font-size: 14px;
+    color: #666;
+  }
+  .footerExtra {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  .footerExtraColumn {
+    flex: 1;
+    min-width: 200px;
+    max-width: 300px;
+  }
+  .footerExtraColumn h3 {
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+  }
+  .footerExtraColumn ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .footerExtraColumn ul li {
+    margin-bottom: 10px;
+  }
+  .footerExtraColumn ul li a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+  }
+  .footerExtraColumn ul li a:hover {
+    color: #ff0019;
+  }
+  .footerExtraColumn input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  .footerExtraColumn button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff0026;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .footerExtraColumn button:hover {
+    background-color: #b3001e;
+  }
+  .footerSection {
+    background-color: skyblue;
+    padding: 20px;
+    text-align: center;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footerContent {
+    max-width: 1200px;
+    width: 100%;
+  }
+  .footerLinks {
+    margin-bottom: 20px;
+  }
+  .footerLinks a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  .footerLinks a:hover {
+    text-decoration: underline;
+  }
+  .footerSocialIcons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  .footerSocialIcons a {
+    color: #333;
+    font-size: 1.5rem;
+  }
+  .footerBottom {
+    margin-top: 20px;
+  }
+  
